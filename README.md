@@ -1,6 +1,6 @@
 # 🚀 RoverProxy - 多平台反向代理解决方案
 
-> 🎯 支持Termux、Docker、Cloudflare Workers、Vercel、EdgeOne、Railway、Claw Cloud、Google Cloud Run、Node.js、的反向代理部署方案
+> 🎯 支持Termux、Docker、Cloudflare Workers、Vercel、EdgeOne、Railway、Claw Cloud、Google Cloud Run、AWS Lambda、Node.js、的反向代理部署方案
 
 # 默认端口
 
@@ -16,6 +16,7 @@
 - [🚂 Railway 部署指南](./docs/railway-deploy.md) - Railway 部署
 - [🚀 Claw Cloud 部署指南](./docs/claw-cloud-deploy.md) - Claw Cloud 部署
 - [☁️ Google Cloud Run 部署指南](./docs/google-cloud-run-deploy.md) - Google Cloud Run 部署
+- [🚀 AWS Lambda 部署指南](./docs/aws-lambda-deploy.md) - AWS Lambda 部署
 - [🐳 Docker 部署指南](./docs/docker-deploy.md) - Docker 部署
 - [📦 Node.js 部署指南](./docs/nodejs-deploy.md) - 本地部署
 
@@ -33,7 +34,8 @@ RoverProxy/
 │   ├── edgeone-deploy.md             # EdgeOne边缘函数 部署指南
 │   ├── railway-deploy.md             # Railway 部署指南
 │   ├── claw-cloud-deploy.md          # Claw Cloud 部署指南
-│   └── google-cloud-run-deploy.md    # Google Cloud Run 部署指南
+│   ├── google-cloud-run-deploy.md    # Google Cloud Run 部署指南
+│   └── aws-lambda-deploy.md          # AWS Lambda 部署指南
 ├── proxy-js/                         # Node.js 代理服务
 │   ├── server.js                     # 主服务文件
 │   ├── package.json                  # 依赖配置
@@ -51,6 +53,7 @@ RoverProxy/
 ├── install_nginx_proxy.sh            # Termux Nginx 一键安装脚本
 ├── railway.toml                      # Railway 配置文件
 ├── edgeone_function.js               # EdgeOne边缘函数 代码
+├── aws_lambda.js                     # AWS Lambda 函数代码
 ├── cloudflare_worker.js              # Cloudflare Workers 代码
 ├── wrangler.toml                     # Cloudflare 配置文件
 └── package.json                      # Cloudflare package.json
