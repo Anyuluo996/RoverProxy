@@ -17,6 +17,7 @@
 - [🚀 Claw Cloud 部署指南](./docs/claw-cloud-deploy.md) - Claw Cloud 部署
 - [☁️ Google Cloud Run 部署指南](./docs/google-cloud-run-deploy.md) - Google Cloud Run 部署
 - [🚀 AWS Lambda 部署指南](./docs/aws-lambda-deploy.md) - AWS Lambda 部署
+- [🐱 Ali ESA 部署指南](./docs/ali-function-deploy.md) - 阿里 ESA 部署
 - [ 🦕 Deno 部署指南](./docs/deno-deploy.md) - Deno 部署
 - [🐳 Docker 部署指南](./docs/docker-deploy.md) - Docker 部署
 - [📦 Node.js 部署指南](./docs/nodejs-deploy.md) - 本地部署
@@ -36,6 +37,7 @@ RoverProxy/
 │   ├── railway-deploy.md             # Railway 部署指南
 │   ├── claw-cloud-deploy.md          # Claw Cloud 部署指南
 │   ├── google-cloud-run-deploy.md    # Google Cloud Run 部署指南
+│   ├── ali-function-deploy.md        # 阿里 ESA 部署指南
 │   ├── deno-deploy.md                # Deno 部署指南
 │   └── aws-lambda-deploy.md          # AWS Lambda 部署指南
 ├── proxy-js/                         # Node.js 代理服务
