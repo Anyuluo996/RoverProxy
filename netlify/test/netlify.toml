@@ -6,7 +6,7 @@
 # 定义 Edge Function - 拦截所有路径
 [[edge_functions]]
   function = "api-proxy"  # 对应 netlify/edge-functions/api-proxy.js 文件名
-  path = "/"              # 拦截根路径
+  path = "/*"             # 必须是 /* 才能拦截所有子路径
 
 # 禁用缓存，确保获取最新内容
 [[headers]]
