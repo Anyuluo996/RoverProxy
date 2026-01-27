@@ -5,8 +5,11 @@ export default async (request, context) => {
   const TARGET_HOST = "api.kurobbs.com";
   const url = new URL(request.url);
 
+  console.log(`[Edge] Received ${request.method} request for: ${url.pathname}`);
+
   // 1. 处理 CORS 预检请求 (OPTIONS)
   if (request.method === "OPTIONS") {
+    console.log("[Edge] Handling OPTIONS preflight request");
     return new Response(null, {
       status: 204,
       headers: {
@@ -81,6 +84,8 @@ export default async (request, context) => {
       redirect: "manual", // 让客户端处理重定向
     });
 
+    console.log(`[Edge] Response status: ${response.status}`);
+
     // 5. 处理响应头 (添加 CORS)
     const responseHeaders = new Headers(response.headers);
     responseHeaders.set("Access-Control-Allow-Origin", "*");
@@ -96,7 +101,7 @@ export default async (request, context) => {
     });
 
   } catch (err) {
-    console.error("Proxy Error:", err);
+    console.error("[Edge] Proxy Error:", err);
     return new Response(JSON.stringify({ error: "代理请求失败", details: err.message }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
@@ -105,5 +110,6 @@ export default async (request, context) => {
 };
 
 // 配置 Edge Function 的路由
-// 拦截所有路径（除了静态文件）
-export const config = { path: "/*" };
+export const config = {
+  path: "/*"
+};
