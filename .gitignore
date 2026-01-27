@@ -65,3 +65,6 @@ huggingface/dist/
 *.seed
 *.pid.lock 
 build-docker.sh
+
+# Local Netlify folder
+.netlify

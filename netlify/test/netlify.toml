@@ -1,0 +1,17 @@
+[build]
+  # 如果只是纯代理，不需要构建命令
+  command = ""
+  publish = "."
+
+# 定义 Edge Function - 拦截所有路径
+[[edge_functions]]
+  function = "api-proxy"  # 对应 netlify/edge-functions/api-proxy.js 文件名
+  path = "/*"              # 监听所有路径
+
+# 禁用缓存，确保获取最新内容
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
