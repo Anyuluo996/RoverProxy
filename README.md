@@ -12,6 +12,7 @@
 - [🤗 Hugging Face 部署指南](./docs/huggingface-deploy.md) - Hugging Face Spaces 部署
 - [☁️ Cloudflare Workers 部署指南](./docs/cloudflare-deploy.md) - Cloudflare Workers 部署
 - [🔺 Vercel 部署指南](./docs/vercel-deploy.md) - Vercel 部署
+- [🌐 Netlify Edge Functions 部署指南](./netlify/README.md) - Netlify Edge Functions 部署
 - [🌐 EdgeOne边缘函数 部署指南](./docs/edgeone-deploy.md) - 腾讯云EdgeOne边缘函数部署
 - [🚂 Railway 部署指南](./docs/railway-deploy.md) - Railway 部署
 - [🚀 Claw Cloud 部署指南](./docs/claw-cloud-deploy.md) - Claw Cloud 部署
@@ -40,6 +41,12 @@ RoverProxy/
 │   ├── ali-function-deploy.md        # 阿里 ESA 部署指南
 │   ├── deno-deploy.md                # Deno 部署指南
 │   └── aws-lambda-deploy.md          # AWS Lambda 部署指南
+├── netlify/                          # 🌐 Netlify Edge Functions 部署方案
+│   ├── index.html                    # 首页
+│   ├── netlify.toml                  # Netlify 配置
+│   ├── README.md                     # 部署指南
+│   └── edge-functions/
+│       └── api-proxy.js              # Edge Function 代码
 ├── proxy-js/                         # Node.js 代理服务
 │   ├── server.js                     # 主服务文件
 │   ├── package.json                  # 依赖配置
